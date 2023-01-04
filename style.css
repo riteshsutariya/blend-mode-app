@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Roboto Mono',Georgia, 'Times New Roman', Times, serif;
+}
+
+/* 
+:: BLEND MODES :: 
+normal 
+multiply
+overlay 
+darken
+lighten
+color-dodge
+color-burn 
+hard-light 
+soft-light 
+difference 
+exclusion 
+hue 
+saturation 
+color  
+luminosity 
+*/
+
+.container {
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.inner-image-container{
+  height: inherit;    
+}
+
+.image-container{
+    position: relative;
+}
+
+.absolute{
+height: 100%;
+width: 100%;
+background-color: white;
+position: absolute;
+top:0;
+left: 0;
+z-index: -1;
+}
+
+.operations {
+    margin: 14px auto;
+    display: flex;
+    gap:1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#blendMode,#innerLayerColor,#innerLayerColorOpacity,#imageOpacity {
+    font-size: larger;
+    padding: 0.5em;
+    margin: 14px 0;
+    width: 100%;
+    outline: none;
+    border: 2px solid rgba(128, 0, 128, 0.596);
+}
+
+/* media queries */
+
+@media(max-width:600px) {
+    .operations{
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 14px;
+    }
+}
