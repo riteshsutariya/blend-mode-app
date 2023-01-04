@@ -57,9 +57,10 @@
         </div>
         <div class="img-selector-container">
             <label for="file-selector" style="cursor: pointer;">select your image</label>
-            <input type="file" name="" style="cursor: pointer;" id="file-selector" onchange="handleFileChange(event)" accept=".jpg,.jpeg,.svg,.png">
+            <input type="file" name="" style="cursor: pointer;" id="file-selector" onchange="handleFileChange(event)"
+                accept=".jpg,.jpeg,.svg,.png">
         </div>
-        <div class="image-container">
+        <div class="image-container" id="imageContainer">
             <div class="inner-image-container">
                 <img id="imgElement" src="http://source.unsplash.com/HvZDCuRnSaY/800x600"
                     alt="A group of friends, sat on stairs, smiling">
@@ -69,7 +70,7 @@
             </div>
         </div>
         <div class="download-button-container">
-            <button class="download-btn" id="download-button"> <a href="" id="download">download</a></button>
+            <button class="download-btn" id="downloadButton"> <a href="" id="download">download</a></button>
         </div>
     </div>
 </body>
