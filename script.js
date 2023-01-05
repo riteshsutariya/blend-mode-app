@@ -14,8 +14,6 @@ const colorLayerOpacity = document.getElementById("innerLayerColorOpacity");
 const fileSelector = document.getElementById("file-selector");
 //image container
 const imageContainer = document.getElementById("imageContainer");
-//download button
-const downloadButton = document.getElementById("downloadButton");
 
 const handleModeChange = () => {
   image.style.mixBlendMode = blendModes.value ? blendModes.value : "normal";
@@ -44,13 +42,6 @@ const handleFileChange = (event) => {
   image.src = URL.createObjectURL(event.target.files[0]);
 };
 
-const doCaptureDiv = (event) => {
-  event.preventDefault();
-  html2canvas(imageContainer).then((canvas) => {
-    console.log(canvas.toDataURL("image/jpeg", 1));
-  });
-};
-
 // adding events for image opacity change and input change event
 imageOpacity.addEventListener("change", handleImageOpacityChange);
 imageOpacity.addEventListener("input", handleImageOpacityChange);
@@ -58,6 +49,3 @@ imageOpacity.addEventListener("input", handleImageOpacityChange);
 // adding events for color layer opacity change and input change event
 colorLayerOpacity.addEventListener("change", handleColorOpacityChange);
 colorLayerOpacity.addEventListener("input", handleColorOpacityChange);
-
-//bind download button click event
-downloadButton.addEventListener("click", doCaptureDiv);
