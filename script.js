@@ -10,6 +10,8 @@ const colorLayer = document.getElementById("LayerColor");
 const imageOpacity = document.getElementById("imageOpacity");
 // color layer opacity
 const colorLayerOpacity = document.getElementById("innerLayerColorOpacity");
+//file selector
+const fileSelector=document.getElementById("file-selector");
 
 const handleModeChange = () => {
   image.style.mixBlendMode = blendModes.value ? blendModes.value : "normal";
@@ -32,6 +34,11 @@ const handleColorOpacityChange = () => {
     : 1;
   console.log(colorLayerOpacity.value);
 };
+
+const handleFileChange=(event)=>{
+console.log(event.target.files[0])
+   image.src=URL.createObjectURL(event.target.files[0])
+} 
 
 // adding events for image opacity change and input change event
 imageOpacity.addEventListener("change", handleImageOpacityChange);

@@ -50,10 +50,14 @@
                 </select>
             </div>
             <div class="inner-layer-color-opacity-container">
-                <label for="innerLayerColorOpacity">inner layer color opacity</label>
+                <label for="innerLayerColorOpacity">inner layer opacity</label>
                 <input type="number" name="innerLayerColorOpacity" id="innerLayerColorOpacity" placeholder="1.0"
                     value="1" step="0.1" min="0" max="1">
             </div>
+        </div>
+        <div class="img-selector-container">
+            <label for="file-selector" style="cursor: pointer;">select your image</label>
+            <input type="file" name="" style="cursor: pointer;" id="file-selector" onchange="handleFileChange(event)" accept=".jpg,.jpeg,.svg,.png">
         </div>
         <div class="image-container">
             <div class="inner-image-container">
@@ -63,6 +67,9 @@
             <div class="absolute container-size" id="LayerColor">
 
             </div>
+        </div>
+        <div class="download-button-container">
+            <button class="download-btn" id="download-button"> <a href="" id="download">download</a></button>
         </div>
     </div>
 </body>
