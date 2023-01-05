@@ -22,7 +22,7 @@ const handleModeChange = () => {
 };
 
 const handleColorChange = () => {
-  imageContainer.style.backgroundColor = innerLayerColors.value
+  colorLayer.style.backgroundColor = innerLayerColors.value
     ? innerLayerColors.value
     : "purple";
 };
@@ -48,7 +48,7 @@ const doCaptureDiv = (event) => {
   event.preventDefault();
   html2canvas(imageContainer).then((canvas) => {
     const outputImage = canvas.toDataURL("image/jpeg");
-    downloadURI(outputImage, "output.png");
+    downloadURI(outputImage, "output.jpeg");
   });
 };
 
