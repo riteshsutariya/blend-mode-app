@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="container">
         <div class="operations">
             <div class="blend-selector-container">
                 <label for="blendMode">select blend mode</label>
@@ -61,7 +61,7 @@
                 accept=".jpg,.jpeg,.svg,.png">
         </div>
         <div class="image-container" id="imageContainer">
-            <div class="inner-image-container">
+            <div class="inner-image-container" id="innerImageContainer">
                 <img id="imgElement" src="http://source.unsplash.com/HvZDCuRnSaY/800x600"
                     alt="A group of friends, sat on stairs, smiling">
             </div>
@@ -74,7 +74,7 @@
         </div>
     </div>
 </body>
-<script src="html2canvas.js"></script>
-<script src="script.js"></script>
+<script src="html2canvas.js" defer></script>
+<script src="script.js" defer></script>
 
 </html>

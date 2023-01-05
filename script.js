@@ -22,7 +22,7 @@ const handleModeChange = () => {
 };
 
 const handleColorChange = () => {
-  colorLayer.style.backgroundColor = innerLayerColors.value
+  imageContainer.style.backgroundColor = innerLayerColors.value
     ? innerLayerColors.value
     : "purple";
 };
@@ -47,8 +47,16 @@ const handleFileChange = (event) => {
 const doCaptureDiv = (event) => {
   event.preventDefault();
   html2canvas(imageContainer).then((canvas) => {
-    console.log(canvas.toDataURL("image/jpeg", 1));
+    const outputImage = canvas.toDataURL("image/jpeg");
+    downloadURI(outputImage, "output.png");
   });
+};
+
+const downloadURI = (uri, name) => {
+  var link = document.createElement("a");
+  link.download = name;
+  link.href = uri;
+  link.click();
 };
 
 // adding events for image opacity change and input change event
